@@ -132,7 +132,7 @@ class mf_links
 				$obj_base->load_font_awesome(array(
 					'type' => 'public',
 					'plugin_include_url' => $plugin_base_include_url,
-					'plugin_version' => $plugin_version,
+					//'plugin_version' => $plugin_version,
 				));
 			}
 
