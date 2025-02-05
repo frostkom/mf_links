@@ -108,7 +108,6 @@ class mf_links
 	function wp_head()
 	{
 		$plugin_include_url = plugin_dir_url(__FILE__);
-		$plugin_version = get_plugin_version(__FILE__);
 
 		$setting_links_open_new_tab = get_option('setting_links_open_new_tab');
 
@@ -136,14 +135,14 @@ class mf_links
 				));
 			}
 
-			//mf_enqueue_style('style_links', $plugin_include_url."style.css", $plugin_version);
+			//mf_enqueue_style('style_links', $plugin_include_url."style.css");
 			mf_enqueue_script('script_links', $plugin_include_url."script.js", array(
 				'setting_links_open_new_tab' => $setting_links_open_new_tab,
 				'no_popup_class' => $this->no_popup_class,
 				'setting_links_icon' => $setting_links_icon,
 				'setting_links_title' => $setting_links_title,
 				'setting_links_confirm' => $setting_links_confirm,
-			), $plugin_version);
+			));
 		}
 	}
 }
